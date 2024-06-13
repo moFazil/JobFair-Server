@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Confirmation</title>
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      body {
+        font-family: sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        align-items: center;
+      }
+
+      .container {
+        width: 90%;
+        margin: 0 auto;
+        padding: 3%;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      .header {
+        background-color: #861b47; /* Dark background color */
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+        border-radius: 10px 10px 0 0;
+      }
+
+      .branding {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .branding h1 {
+        color: #fff; /* Changed the color to white */
+        font-size: 32px;
+        font-weight: 900;
+      }
+
+      .icon {
+        font-size: 36px;
+      }
+
+      .message {
+        background-color: #fff;
+        padding: 20px 30px; /* Add padding to the top and bottom */
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px; /* Added margin to create space between sections */
+      }
+      .message p {
+        padding: 0 20px;
+        font-family: sans-serif;
+      }
+      .message h5 {
+        font-size: medium;
+      }
+
+      .event-details {
+        background-color: #f9f9f9;
+        padding: 20px 30px; /* Add padding to the top and bottom */
+        border-radius: 10px 10px 0 0;
+      }
+
+      .event-details h2 {
+        color: #861b47;
+        font-size: 30px; /* Increased font size */
+        margin-bottom: 10px;
+      }
+
+      .event-details ul {
+        list-style: none;
+        padding: 0 20px;
+      }
+
+      .event-details ul li {
+        margin-bottom: 10px;
+      }
+      .event-details span {
+        font-weight: bold;
+      }
+
+      .address {
+        background-color: #861b47;
+        color: #fff;
+        padding: 20px 30px;
+        border-radius: 0 0 10px 10px;
+        box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+      }
+      .address p {
+        padding: 0 20px;
+      }
+      .address h4 {
+        font-weight: 800;
+      }
+
+      .footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px 0;
+      }
+
+      .footer p {
+        margin: 0;
+        padding: 5px 0;
+      }
+
+      .privacy-policy {
+        margin: 40px 0 0 0;
+        text-align: center;
+      }
+
+      .privacy-policy p {
+        font-size: 12px;
+      }
+
+      .subscribe {
+        text-align: center;
+        margin: 10px 0 40px 0;
+      }
+
+      .subscribe a {
+        color: #861b47;
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          width: 100%;
+          padding: 10px;
+        }
+        body {
+          display: flex;
+        }
+
+        .header {
+          padding: 10px 0;
+        }
+
+        .branding h1 {
+          font-size: 24px;
+        }
+
+        .message {
+          padding: 20px 10px; /* Add padding to the top and bottom */
+        }
+
+        .event-details ul li {
+          margin-bottom: 8px;
+        }
+
+        .event-details h2 {
+          font-size: 24px; /* Increase font size for smaller screens */
+        }
+
+        .icon {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div class="branding">
+          <h1>Welcome to WHY tap Exclusive Job Fair!</h1>
+          <p>Your gateway to extraordinary opportunities.</p>
+        </div>
+        <i class="icon fas fa-check-circle"></i>
+      </div>
+      <div class="message">
+        <h5>Dear <%= name %>,</h5>
+        <p>
+          Thank you for registering with us. You have successfully secured a
+          slot at our Exclusive Job Fair, and we want to let you know that this
+          is a unique and extraordinary opportunity. You're among the fortunate
+          few!
+        </p>
+      </div>
+
+      <div class="event-details">
+        <h2 style="font-size: 30px">Event Details:</h2>
+        <!-- Increased font size for event details -->
+        <ul>
+          <li><span>Name:</span> <%= name %></li>
+          <li><span>Mobile Number:</span> <%= mobile %></li>
+          <li><span>Email:</span> <%= email %></li>
+          <li><span>Event Date:</span> 22nd Sep 2023</li>
+          <li><span>Event Time Slot:</span> <%= slot %></li>
+        </ul>
+      </div>
+      <div class="address">
+        <h4>Address:</h4>
+        <p>
+          3rd Floor, New N0. 75 77 & 79, Lohmanradhri Tower, Pantheon Road,
+          Egmore, Chennai, Tamil Nadu, 600008.
+        </p>
+        <p>Contact: 82700 99991</p>
+        <p>Email: contact@whytap.in</p>
+      </div>
+      <div class="privacy-policy">
+        <p>
+          <a href="https://whytap.in/privacy-policy" target="_blank"
+            >Privacy Policy</a
+          >
+        </p>
+      </div>
+      <div class="subscribe">
+        <p>
+          If you wish to unsubscribe,
+          <a href="https://whytap.in/unsubscribe" target="_blank">click here</a
+          >.
+        </p>
+      </div>
+      <div class="footer">
+        <p>© 2023 WHY tap. All Rights Reserved</p>
+        <p>Powered by WHY Global Services</p>
+      </div>
+    </div>
+  </body>
+</html>
